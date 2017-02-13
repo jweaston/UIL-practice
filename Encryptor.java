@@ -3,14 +3,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 import java.time.Instant;
-public class Encyptor {
+public class Encryptor {
 
 	private static final SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Date date = new Date();
 		Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 		
 		int A,B;
@@ -22,7 +21,7 @@ public class Encyptor {
 		char[] messageArray;
 		int[] encyptedArray;
 		
-		while(true){
+		while(input.nextLine().equals("close")){
 		
 			messageOriginal = input.nextLine();
 			
@@ -54,6 +53,8 @@ public class Encyptor {
 			System.out.println();
 
 		}
+		
+		input.close();
 	}
 
 }
